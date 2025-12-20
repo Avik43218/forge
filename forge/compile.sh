@@ -20,7 +20,7 @@ function compile () {
 
                 return 0
 
-	elif [ "${src_file##*.}" == "cpp" ]; then
+		elif [ "${src_file##*.}" == "cpp" ]; then
                 if [ -z "$1" ] && [ -z "$2" ]; then
                         echo "Error; Usage is: compile <source_file_name>.cpp <optional_output_executable>"
                         return 1
@@ -45,7 +45,7 @@ function compile () {
                 rustc "$1"
 
                 return 0
-	elif [ "${src_file##*.}" == "java" ]; then
+		elif [ "${src_file##*.}" == "java" ]; then
                 if [ -z "$1" ]; then
                         echo "Error: Usage is: compile <source_file_name>.java"
                         return 1
@@ -85,7 +85,7 @@ function rcompile () {
 
                 return 0
 
-	elif [ "${src_file##*.}" == "cpp" ]; then
+		elif [ "${src_file##*.}" == "cpp" ]; then
                 if [ -z "$1" ] && [ -z "$2" ]; then
                         echo "Error; Usage is: compile <source_file_name>.cpp <optional_output_executable>"
                         return 1
@@ -104,7 +104,7 @@ function rcompile () {
 
                 return 0
 
-	elif [ "${src_file##*.}" == "rs" ]; then
+		elif [ "${src_file##*.}" == "rs" ]; then
                 if [ -z "$1" ]; then
                         echo "Error: Usage is: compile <source_file_name>.rs"
                         return 1
