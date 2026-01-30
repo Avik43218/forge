@@ -136,7 +136,7 @@ function rcompile () {
                 echo "Compiling $1 into executable ${src_file%.*}..."
                 rustc "$1"
                 echo -e "Running application...\n"
-                "./${src_name%.*}"
+                "./${src_file%.*}"
 
                 return 0
 
