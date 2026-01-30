@@ -153,7 +153,7 @@ function rcompile () {
 
                 return 0
 
-	elif [ "${src_file##*.}" == "asm" ] || [ "${src_file##*.}" == "s"]; then
+	elif [ "${src_file##*.}" == "asm" ] || [ "${src_file##*.}" == "s" ]; then
                 if [ -z "$1" ] && [ -z "$2" ]; then
                         echo "Error: Usage is: compile <source_file_name> <optional_object_name>"
                         return 1
