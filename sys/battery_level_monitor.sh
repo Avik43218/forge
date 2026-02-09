@@ -1,7 +1,5 @@
 #!/bin/bash
 
-USER=$(id -u)
-
 BAT_PATH="/sys/class/power_supply/BAT0/capacity"
 AC_PATH="/sys/class/power_supply/ADP1/online"
 LOG_FILE="/home/$USER/.battery.log"
