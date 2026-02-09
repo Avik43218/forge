@@ -21,7 +21,7 @@ while true; do
 		DURATION=$((END_TIME - START_TIME))
 
 		LOG_ENTRY="$(date '+%Y-%m-%s %H:%M:%S') | Level: ${CURRENT_LEVEL}% | Duration: ${DURATION} s"
-		echo "$LOG_ENTRY" >> "LOG_FILE"
+		echo "$LOG_ENTRY" >> "$LOG_FILE"
 
 		CURRENT_LEVEL=$NEW_LEVEL
 		START_TIME=$SECONDS
