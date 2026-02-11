@@ -18,17 +18,17 @@ while true; do
 
     if [ "$current_state" != "$last_state" ]; then
         if [ "$current_state" = "1" ]; then
-            notify-send "Power Connected" "Switching to Live Video Wallpaper" -i battery-charging -a "Power Monitor"
+            notify-send "Power Connected" "Switching to Live Video Wallpaper" -i battery-charging -a "Power Monitor" -t 3000
             bash "$ON_POWER_SCRIPT"
         else
-            notify-send "Power Disconnected" "Switching to Image Wallpaper" -i battery-caution -a "Power Monitor"
+            notify-send "Power Disconnected" "Switching to Image Wallpaper" -i battery-low -a "Power Monitor" -t 3000
             bash "$ON_BATTERY_SCRIPT"
         fi
         last_state=$current_state
     fi
 
     if [ $battery_level -lt 20 ]; then
-        notify-send "Low Battery" "Switching to Power Saving Wallpaper" -i battery-low -a "Power Monitor"
+        notify-send "Low Battery" "Switching to Power Saving Wallpaper" -i battery-caution -a "Power Monitor" -t 3000
         bash "$LOW_BATTERY_SCRIPT"
     fi
 
