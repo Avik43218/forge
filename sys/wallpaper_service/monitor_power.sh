@@ -27,7 +27,7 @@ while true; do
         last_state=$current_state
     fi
 
-    if [ $battery_level -lt 20 ]; then
+    if [ $battery_level -lt 21 ]; then
         notify-send "Low Battery" "Switching to Power Saving Wallpaper" -i battery-caution -a "Power Monitor" -t 3000
         bash "$LOW_BATTERY_SCRIPT"
     fi
