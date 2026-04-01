@@ -27,6 +27,6 @@ else
         var d = allDesktops[i];
         d.wallpaperPlugin = 'org.kde.image';
         d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];
-        d.writeConfig('Image', 'file:///home/ghost/Pictures/Wallpapers/$1');
+        d.writeConfig('Image', 'file:///home/$USER/Pictures/Wallpapers/$1');
     }"
 fi

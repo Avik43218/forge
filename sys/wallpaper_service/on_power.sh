@@ -28,7 +28,7 @@ else
         var d = allDesktops[i];
         d.wallpaperPlugin = 'luisbocanegra.smart.video.wallpaper.reborn';
         d.currentConfigGroup = ['Wallpaper', 'luisbocanegra.smart.video.wallpaper.reborn', 'General'];
-        d.writeConfig('VideoUrls', 'file:///home/ghost/Pictures/Wallpapers/$1');
+        d.writeConfig('VideoUrls', 'file:///$USER/ghost/Pictures/Wallpapers/$1');
         d.writeConfig('LastVideo', '');
     }"
 fi
